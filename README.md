@@ -1,4 +1,4 @@
-# 🧘‍♀️ Harmonia Studio – Sistema de Agendamento de Aulas de Pílates
+# 🧘‍♀️ Harmonia Studio – Sistema de Agendamento de Aulas de Pilates
 
 Este é um sistema web desenvolvido para um estúdio de Pilates, permitindo que alunos se cadastrem, façam login e agendem aulas.  
 O projeto foi construído utilizando **Node.js**, **Express**, **TypeScript**, **SQLite** e **EJS**, seguindo o padrão **MVC**.
