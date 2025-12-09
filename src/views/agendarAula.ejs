@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <%- include('partials/head.ejs') %>
+
+<head>
+  <link rel="stylesheet" href="/css/index.css"> 
+</head>
+
+<body class="top-espaco">
+  <%- include('partials/navbar.ejs') %>
+  <header class="hero d-flex align-items-center" style="background-image: url('/img/studio1.jpg'); background-size: cover; background-position: center; min-height: 100vh;">
+      <div class="hero-overlay"></div>
+        <div class="container text-center py-4">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="display-3 hero-text sombra-texto">Agendar aula</h1>
+              <p class="lead mb-4 hero-text sombra-texto">
+                "Corpo em movimento, mente em equilíbrio: viva o bem-estar com o pilates."
+              </p>
+              <a href="/perfilAluno">
+                <button class="button-dark rounded px-4 py-3 w-30 fs-5 fs-lg-4">
+                  Clique aqui
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <main>
+    <section class="bg-cor3">
+      <div class="container py-4">
+        <h1 class="text-center">Transforme sua saúde com o pilates</h1>
+        <h3 class="text-center"><em>Veja alguns exemplos:</em></h3>
+        <br>
+        <div class="row">
+          <% for (let i = 0; i < pessoas.length; i++) { %>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 lift-card">
+                <img
+                  src="<%= pessoas[i].imagem %>"
+                  class="card-img-top"
+                  alt="<%= pessoas[i].titulo %>"
+                />
+                <div class="card-body bg-light">
+                  <h5 class="card-title"><%= pessoas[i].titulo %></h5>
+                  <blockquote class="card-text"><em><%= pessoas[i].descricao %></em></blockquote>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container py-4">
+        <h1 class="text-center">Venha você também fazer parte!</h1>
+        <h3 class="text-center"><em>Escolha o dia e horário para sua aula</em></h3>
+        <img src="/img/aula1.jpg" class="img-fluid mx-auto d-block" alt="Pessoas praticando pilates">
+        <br>
+        <h4 class="text-center"><em>"Descubra a leveza de viver bem."</em></h4>
+        <p></p>
+      </div>
+    </section>
+
+      
+
+      
+  </main>
+
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>

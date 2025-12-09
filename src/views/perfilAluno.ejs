@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('partials/head.ejs') %>
+
+<body class="bg-cor3">
+  <%- include('partials/navbar.ejs') %>
+  
+  <div class="d-flex vh-100 justify-content-center align-items-center">
+    <div class="container">
+      <form action="/agendamento" method="get" class="mx-auto">
+        <div class="card shadow-sm border">
+          <div class="card-body">
+            <h3 class="text-center mb-4 text-color">Informações Pessoais</h3>
+            <hr>
+            <p><strong>Nome:</strong> <%= aluno.nome_completo %></p>
+            <p><strong>CPF:</strong> <%= aluno.cpf %></p>
+            <p><strong>Sexo:</strong> <%= aluno.sexo %></p>
+            <p><strong>Celular:</strong> <%= aluno.celular %></p>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+          <a href="/login" class="btn btn-outline-secondary">Trocar de Conta</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <%- include ('partials/footer.ejs') %>
+</body>
+</html>

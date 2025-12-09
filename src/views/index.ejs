@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <%- include('partials/head.ejs') %>
+<head>
+  <link rel="stylesheet" href="/css/index.css"> 
+</head>
+
+<body class="top-espaco">
+  <%- include('partials/navbar.ejs') %>
+
+  <!-- Hero Section -->
+  <header class="hero d-flex align-items-center" style="background-image: url('/img/hero.jpg'); background-size: cover; background-position: center; min-height: 100vh;">
+    <div class="hero-overlay"></div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="display-3 hero-text sombra-texto">Mente, corpo e alma</h1>
+          <p class="lead mb-4 hero-text sombra-texto">
+            Alcance harmonia e bem-estar por meio da arte do Pilates
+          </p>
+          <a href="/agendarAula">
+            <button class="btn btn-primary form-botao rounded px-4 py-3 w-30 fs-5 fs-lg-4">
+              Agende uma aula experimental
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sobre Section -->
+  <section id="about" class="bg-cor3 py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <img src="/img/foto2.jpg" class="img-fluid rounded" alt="Aula de Pilates">
+        </div>
+        <div class="col-12 col-md-6">
+          <h2 class="text-center mb-3">Seja bem-vindo ao Harmonia Studio</h2>
+          <p class="lead text-center mb-3">
+            Um espaço onde mente, corpo e espírito se conectam em plena harmonia
+          </p>
+          <p>
+            No Harmonia Studio, acreditamos que o Pilates tem o poder de transformar vidas. Com a orientação atenta dos nossos instrutores experientes, você vivencia sessões personalizadas que fortalecem seu corpo, aumentam sua flexibilidade e elevam seu bem-estar físico e mental.
+          </p>
+          <div class="features mt-4">
+            <div class="feature "><i class="bi bi-check2-circle"></i> Instrutores especialistas e certificados</div>
+            <div class="feature"><i class="bi bi-check2-circle"></i> Equipamentos de última geração</div>
+            <div class="feature"><i class="bi bi-check2-circle"></i> Treinos personalizadas para fazer em casa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treinos Section -->
+  <section id="classes" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Nossos Treinos</h2>
+      <div class="row">
+        <% for (let i = 0; i < treinos.length; i++) { %>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 lift-card">
+              <img
+                src="<%= treinos[i].imagem %>"
+                class="card-img-top"
+                alt="<%= treinos[i].titulo %>"
+              />
+              <div class="card-body bg-cor3">
+                <h5 class="card-title"><%= treinos[i].titulo %></h5>
+                <p class="card-text"><%= treinos[i].descricao %></p>
+                <a href="/treinos#<%= treinos[i].id %>" class="btn button-dark">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer.ejs') %>
+</body>
+</html>

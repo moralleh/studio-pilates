@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #9f8170;
+  --secondary-color: #ecd4c1;
+  --third-color: #fdeed7;
+  --text-color: #522818e1;
+  --text-color-dark: #3e1f14;
+  --light-bg: #faf6f4;
+  --red: #ff2929;
+}
+  
+body {
+  background-color: var(--light-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+}
+
+.login {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#cpfError {
+  display:none; 
+  color:var(--red);
+}

@@ -1,0 +1,30 @@
+/* Hero Section*/
+.form-botao {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  opacity: 0.8;
+  border-color: 1px var(--text-color);
+  font-weight: bold;
+}
+.form-botao:hover {
+  background-color: var(--text-color);
+  border-color: 1px var(--text-color);
+}
+.hero-text {
+  color: #fff;
+  font-weight: bold;
+  opacity: 0.8;
+} 
+
+/* Sobre Section */
+.features .feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.features .feature i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}

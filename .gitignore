@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# TypeScript build
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Temporary folders
+tmp/
+temp/
+
+# Cache
+.cache/
+*.cache

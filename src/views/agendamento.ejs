@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('partials/head.ejs') %>
+
+<body class="bg-cor3">
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="d-flex vh-100 justify-content-center align-items-center">
+        <div class="container">
+           <% if (typeof sucesso !== 'undefined') { %>
+                <div class="alert alert-success text-center" id="sucesso-msg">
+                    <%= sucesso %>
+                </div>
+            <% } %>
+
+            <% if (typeof erro !== 'undefined') { %>
+                <div class="alert alert-danger text-center" id="erro-msg">
+                    <%= erro %>
+                </div>
+            <% } %>
+
+
+            <form action="/agendamento/agendar" method="POST" class="mx-auto" id="formulario">
+                <div class="card shadow-sm border">
+
+                    <div class="card-body">
+                        <h3 class="text-center mb-4 text-color">Agendar aula experimental</h3>
+                        <hr>
+
+                       <!-- Data: mínimo é o dia de hoje -->
+                        <div class="mb-3">
+                            <label for="data" class="form-label">Escolha o dia:</label>
+                            <input type="date" class="form-control" id="data" name="data" required>
+                            <p id="mensagem" style="color: red;"></p>
+                        </div>
+
+                        <!-- Horários disponíveis -->
+                        <div class="mb-3">
+                            <label for="horario" class="form-label">Escolha o horário:</label>
+                            <select class="form-select" id="horario" name="horario" required>
+                                <option value="" disabled selected>Selecione um horário</option>
+                                <option value="08:00">08:00 - 9:00: Professora Amanda Freitas</option>
+                                <option value="09:00">09:00 - 10:00: Professora Amanda Freitas</option>
+                                <option value="10:00">10:00 - 11:00: Professora Amanda Freitas</option>
+                                <option value="13:00">13:00 - 14:00: Professor Fernando Passos</option>
+                                <option value="14:00">14:00 - 15:00: Professor Fernando Passos</option>
+                                <option value="15:00">15:00 - 16:00: Professor Fernando Passos</option>
+                            </select>
+                        </div>
+
+                         <div class="mb-3">
+                            <p>Observação: Nossas aulas experimentais são realizadas em grupo. As aulas particulares só podem ser agendadas após a primeira aula.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button type="submit" class="btn btn-primary">Agendar</button>
+                    <a href="/" class="btn btn-outline-secondary">Sair</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/agendamento.js"></script>
+</body>
+
+<%- include ('partials/footer.ejs') %>
+</html>

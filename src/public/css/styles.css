@@ -1,0 +1,200 @@
+:root {
+  --primary-color: #9f8170;
+  --secondary-color: #ecd4c1;
+  --third-color: #fdeed7;
+  --text-color: #522818e1;
+  --text-color-dark: #3e1f14;
+  --light-color: #faf6f4;
+  --red: #ff2929;
+  --gray: #797979ee;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.top-espaco {
+  padding-top: 100px;
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+/* Cores de Fundo */
+.bg-cor1 {
+  background-color: var(--text-color-dark);
+  width: 100%;
+}
+.bg-cor2 {
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+.bg-cor3 {
+  background-color: var(--third-color);
+  width: 100%;
+}
+.bg-light {
+  background-color: var(--light-color);
+  width: 100%;
+}
+.bg-white {
+  background-color: white;
+  width: 100%;
+}
+
+/* Títulos para as páginas */
+.titulo {
+  font-size: 4.5rem;
+}
+
+/* Sombra de texto */
+.sombra-texto {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo - Navbar */
+.text-logo1 {
+  font-family: 'PT Serif', serif;
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+.text-logo2 {
+  color: var(--text-color);
+  letter-spacing: 8px;
+}
+.img-logo {
+  width: 70px;
+  height: 70px;
+}
+
+/* Navegação */
+.navbar-item-color {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+.navbar-item-color:hover{
+  background-color:rgba(0, 0, 0, 0.05); 
+  transition: background-color 0.2s ease;
+}
+.nav-cor3 {
+  background-color: var(--third-color);
+}
+
+/* Tamanhos de Imagens */
+.w-15 {
+  width: 15%; /* Footer */
+}
+/* Imagem principal das páginas quemSomos e Treinos */
+.img-titulo {
+  max-width: 500px;  
+  width: 100%;        
+  height: auto;       
+}
+
+/* Botões */
+/* Login */
+.btn-primary {
+    background-color: var(--text-color);
+    color: var(--light-color);
+    border: none;
+}
+.btn-primary:hover {
+  background-color: var(--text-color-dark);
+}
+/* Footer */
+.button-red {
+  color: var(--light-color);
+  background-color: var(--red);
+  border-color: var(--light-color);
+}
+.button-red:hover {
+  background-color: var(--primary-color);
+}
+/* Home - Cards */
+.button-dark {
+  color: var(--light-color);
+  background-color: var(--text-color);
+  border-color: var(--text-color-dark);
+}
+.button-dark:hover {
+  background-color: var(--text-color-dark);
+  color: var(--gray);
+}
+
+/* Transições */
+.logo-transition {
+  transition: all 0.6s ease;
+}
+.logo-transition:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-transition {
+  transition: all 0.6s ease;
+}
+.btn-transition:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* Cards */
+.lift-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lift-card:hover {
+  transform: translateY(-10px); /* levanta o card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* sombra mais profunda */
+}
+
+/* Agendamento */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+
+/* Título para quemSomos e treinos */
+@media (max-width: 992px) { 
+  .titulo {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) { 
+  .titulo {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) { 
+  .titulo {
+    font-size: 2rem;
+  }
+}
+
+/* Imagem para quemSomos e treinos */
+@media (min-width: 768px) {
+  .img-titulo {
+    width: 700px;
+  }
+}
+
+/* Logo: para telas grandes (lg) ou superiores */
+@media (min-width: 992px) {
+  .img-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Esconde o nome da logo em telas =<320 */
+@media (max-width: 320px) {
+  .hide-under-320 {
+    display: none;
+  }
+}
+/* 
+@media (max-width: 991px) {
+  body {
+    padding-top: 90px;
+  }
+} */
